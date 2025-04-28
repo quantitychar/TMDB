@@ -1,0 +1,21 @@
+@import url("./reset.scss");
+@import url("./layout/pages.scss");
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

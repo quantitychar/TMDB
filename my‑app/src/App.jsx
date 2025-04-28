@@ -1,27 +1,11 @@
 import { useState } from "react";
-import ModalImage from "./assets/components/ModalImage/ModalImage";
-import Modal from "./assets/components/Modal/Modal";
+import Home from "./assets/pages/Home/Home";
 
-import "./App.css";
+// import "./App.css";
 
+import "./assets/styles/style.scss";
 function App() {
-  const [modalImg, setModalImg] = useState(false);
-
-  const handleModalImage = () => {
-    setModalImg(!modalImg);
-  };
-
-  return (
-    <>
-      <button type="button" onClick={handleModalImage}>
-        ModalImage
-      </button>
-
-      <Modal isOpen={modalImg}>
-        <ModalImage onClick={handleModalImage} />
-      </Modal>
-    </>
-  );
+  return <Home />;
 }
 
 export default App;

@@ -1,0 +1,9 @@
+.g-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .g-content {
+    flex: 1 1 0.1%;
+  }
+}

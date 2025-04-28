@@ -3,7 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 import "./Button.scss";
 
-export default function Button({ children, onClick }) {
+export default function Button(props) {
   const {
     onClick,
     type = "button",
@@ -19,7 +19,7 @@ export default function Button({ children, onClick }) {
 
   return (
     <Element
-      type={!href && type}
+      type={href && type}
       className={cn("button", className, { outline: isOutline })}
       onClick={onClick}
       href={href}

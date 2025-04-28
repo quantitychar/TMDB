@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 37, 65, 1);
+  min-height: 64px;
+  width: 100%;
+  transition: top 0.2s linear;
+
+  .header__logo {
+    .logo {
+      display: block;
+      width: 154px;
+    }
+  }
+
+  .header__actions {
+    .header__favorites-list {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 16px;
+
+      .icon-favorite {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        margin-left: 8px;
+
+        svg {
+          width: 100%;
+          fill: currentColor;
+        }
+
+        .count {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          font-size: 10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
