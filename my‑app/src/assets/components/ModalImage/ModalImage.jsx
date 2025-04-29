@@ -3,6 +3,7 @@ import Modal from "../Modal/Modal";
 import Button from "../Button/Button";
 
 function ModalImage({ isOpen, onClick }) {
+  if (!isOpen) return null;
   return (
     <>
       <Modal.Header>

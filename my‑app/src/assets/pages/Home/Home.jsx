@@ -11,6 +11,7 @@ import { API_URL, API_KEY_3 } from "../../configs/api";
 const Home = (props) => {
   const [modalImg, setModalImg] = useState(false);
   const [modalText, setModalText] = useState(false);
+
   const [tv, setTv] = useState([]);
   const [movie, setMovie] = useState([]);
   const [favorite, setFavorite] = useState(0);

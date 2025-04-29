@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 
 const ModalText = ({ isOpen, onClick }) => {
+  if (!isOpen) return null;
   return (
     <>
       <Modal.Body>
