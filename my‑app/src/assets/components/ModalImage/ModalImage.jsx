@@ -19,7 +19,6 @@ function ModalImage({ isOpen, onClick }) {
           Cancel
         </Button>
       </Modal.Footer>
-      <Modal.Close onClick={onClick} />
     </>
   );
 }

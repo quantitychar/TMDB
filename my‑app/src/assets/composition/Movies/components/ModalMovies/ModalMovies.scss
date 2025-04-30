@@ -1,0 +1,46 @@
+.modal-movies {
+  .modal-header {
+    margin-bottom: 24px;
+
+    .image {
+      width: 224px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .modal-content {
+  }
+
+  .modal-footer {
+    margin-top: 24px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .modal-subTitle {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .modal-desc {
+    max-height: 120px;
+    overflow: hidden;
+    line-height: 1.4;
+  }
+}

@@ -9,10 +9,13 @@ import ModalWrapper from "./ModalWrapper";
 
 import "./ModalBase.scss";
 
-function Modal({ children, isOpen = false }) {
+function Modal({ children, isOpen = false, onClick }) {
   return (
-    <ModalWrapper isOpen={isOpen}>
-      <ModalBox>{children}</ModalBox>
+    <ModalWrapper isOpen={isOpen} onClick={onClick}>
+      <ModalBox>
+        {children}
+        <Modal.Close onClick={onClick} />
+      </ModalBox>
     </ModalWrapper>
   );
 }
