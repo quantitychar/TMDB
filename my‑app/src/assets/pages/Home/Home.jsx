@@ -52,9 +52,9 @@ const Home = (props) => {
       return [...prev, item]; /// якщо немає то додаємо його в масив
     });
 
-    // localStorage.setItem("favorite", JSON.stringify([...favorite, item]))
-    // console.log("favorite",favorite)
-    // console.log("active item",item)
+    localStorage.setItem("favorite", JSON.stringify([...favorite, item]));
+    // console.log("favorite", favorite);
+    // console.log("active item", item);
 
     setModalMovie(!modalMovie); /// закриваємо модальне вікно
   };
@@ -78,8 +78,9 @@ const Home = (props) => {
   useEffect(() => {
     getData();
   }, []);
-  console.log("movie", movie);
-  console.log("tv", tv);
+  // console.log("movie", movie);
+  // console.log("tv", tv);
+  console.log("favorite", favorite);
 
   const isDelete = favorite.some((el) => el.id === currentFilm.id);
 
