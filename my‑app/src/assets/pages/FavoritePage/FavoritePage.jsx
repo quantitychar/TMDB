@@ -1,7 +1,7 @@
 import React from "react";
 import "./FavoritePage.scss";
-import ModalMovies from "@/composition/ModalMovies/ModalMovies";
-import PosterCard from "@/components/PosterCard/PosterCard";
+import ModalMovies from "./../../composition/Movies/components/ModalMovies/ModalMovies";
+import PosterCard from "./../../components/PosterCard/PosterCard";
 
 const FavoritePage = ({ data = [], onFavorite }) => {
   return (
@@ -11,7 +11,7 @@ const FavoritePage = ({ data = [], onFavorite }) => {
           <PosterCard key={item.id} poster={item} />
         ))}
       </div>
-      {/* <ModalMovies /> */}
+      <ModalMovies />
     </>
   );
 };
