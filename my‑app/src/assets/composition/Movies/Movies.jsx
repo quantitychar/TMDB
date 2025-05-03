@@ -5,7 +5,6 @@ import "./Movies.scss";
 
 const Movies = ({ data, onCurrentFilm }) => {
   const { dataTv, dataMovie } = data;
-
   return (
     <div className="films__container">
       <MovieSection

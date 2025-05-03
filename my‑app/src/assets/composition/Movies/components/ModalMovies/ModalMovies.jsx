@@ -9,6 +9,9 @@ import "./ModalMovies.scss";
 const ModalMovies = (props) => {
   const { isOpen, isDelete, onClick, onClose, data } = props;
 
+  console.log(data);
+  if (!isOpen || !data) return null;
+
   return (
     <Modal.Wrapper isOpen={isOpen} onClick={onClose}>
       <Modal.Box className="modal-movies">

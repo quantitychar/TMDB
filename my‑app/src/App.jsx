@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RootRouter from "./assets/routers/index";
 import Footer from "./assets/composition/Footer/Footer";
 import Header from "./assets/composition/Header/Header";
@@ -19,6 +19,7 @@ function App() {
     });
   };
 
+  // console.log("App favorite:", favorite);
   return (
     <div className="g-app">
       <Header count={favorite.length} />

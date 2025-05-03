@@ -4,6 +4,7 @@ import ModalMovies from "./../../composition/Movies/components/ModalMovies/Modal
 import PosterCard from "./../../components/PosterCard/PosterCard";
 
 const FavoritePage = ({ data = [], onFavorite }) => {
+  console.log("FavoritePage data:", data);
   return (
     <>
       <div className="posters-wrapper">

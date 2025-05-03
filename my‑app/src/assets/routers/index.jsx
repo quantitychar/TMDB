@@ -5,6 +5,7 @@ import NotPage from "./../pages/NotPage/NotPage";
 import FavoritePage from "./../pages/FavoritePage/FavoritePage";
 
 export default ({ favorite, onFavorite }) => {
+  console.log("RootRouter favorite:", favorite);
   return (
     <Routes>
       <Route

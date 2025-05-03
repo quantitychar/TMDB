@@ -34,6 +34,7 @@ const Home = (props) => {
   };
 
   const handleFavorite = (item) => {
+    console.log("CLICK ➡️ item:", item);
     onFavorite(item); /// викликаємо функцію яка прийшла з App.jsx і передаємо в неї активний фільм
 
     // localStorage.setItem("favorite", JSON.stringify([...favorite, item]))
