@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
-import Container from "@/layout/Container/Container";
-import ArrowIcon from "./icons/left-arrow.svg?react";
-import { API_URL, IMG_URL, API_KEY_3 } from "@/configs/api";
-import { sendRequestAxios } from "@/helpers/sendRequestAxios";
+import Container from "../../layout/Container/Container";
+// import { ArrowIcon } from "./icons/left-arrow.svg";
+import { API_URL, IMG_URL, API_KEY_3 } from "./../../configs/api";
+import { sendRequestAxios } from "../../helpers/sendRequestAxios";
 import "./CinemaPage.scss";
 
 const CinemaPage = () => {
