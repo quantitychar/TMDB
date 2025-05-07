@@ -6,9 +6,9 @@ import { API_URL, IMG_URL, API_KEY_3 } from "./../../configs/api";
 import { sendRequestAxios } from "../../helpers/sendRequestAxios";
 import Container from "../../layout/Container/Container";
 
-import "./AllCinemaPage.scss";
+import "./AllTvPage.scss";
 
-const AllCinemaPage = ({ onFavorite, favorite }) => {
+const AllTvPage = ({ onFavorite, favorite }) => {
   const [data, setData] = useState({});
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
@@ -36,9 +36,9 @@ const AllCinemaPage = ({ onFavorite, favorite }) => {
 
   useEffect(() => {
     sendRequestAxios(
-      `${API_URL}/discover/movie?api_key=${API_KEY_3}&language=uk-UA&page=1`
+      `${API_URL}/discover/tv?api_key=${API_KEY_3}&language=uk-UA&page=${page}`
     ).then((data) => {
-      setData(data); // метадані
+      setData(data);
       setResults(data.results);
     });
   }, []);
@@ -47,7 +47,7 @@ const AllCinemaPage = ({ onFavorite, favorite }) => {
     if (page === 1) return;
 
     sendRequestAxios(
-      `${API_URL}/discover/movie?api_key=${API_KEY_3}&language=uk-UA&page=${page}`
+      `${API_URL}/discover/tv?api_key=${API_KEY_3}&language=uk-UA&page=${page}`
     ).then((data) => {
       setResults((prev) => {
         const prevIds = new Set(prev.map((m) => m.id));
@@ -57,6 +57,9 @@ const AllCinemaPage = ({ onFavorite, favorite }) => {
       setData(data);
     });
   }, [page]);
+
+  //   console.log("results", results);
+
   return (
     <Container>
       <div className="g-page">
@@ -86,4 +89,4 @@ const AllCinemaPage = ({ onFavorite, favorite }) => {
     </Container>
   );
 };
-export default AllCinemaPage;
+export default AllTvPage;

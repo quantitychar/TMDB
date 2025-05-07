@@ -1,0 +1,14 @@
+.g-tab {
+  .tab-nav {
+    margin-bottom: 24px;
+  }
+
+  .tab-button {
+    & + .tab-button {
+      margin-left: 16px;
+    }
+  }
+
+  //   .tab-content {
+  //   }
+}

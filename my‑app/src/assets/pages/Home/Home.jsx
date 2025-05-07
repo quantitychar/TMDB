@@ -4,6 +4,7 @@ import { sendRequestAxios } from "../../helpers/sendRequestAxios";
 import { API_URL, API_KEY_3 } from "../../configs/api";
 import Movies from "../../composition/Movies/Movies";
 import ModalMovies from "../../composition/Movies/components/ModalMovies/ModalMovies";
+import Container from "../../layout/Container/Container";
 
 const Home = (props) => {
   const { favorite, onFavorite } = props;
@@ -74,7 +75,7 @@ const Home = (props) => {
   const isDelete = favorite.some((el) => el.id === currentFilm.id);
 
   return (
-    <>
+    <Container>
       <Movies
         data={{
           dataTv: tv,
@@ -89,7 +90,7 @@ const Home = (props) => {
         onClose={handleModalMovie}
         data={currentFilm}
       />
-    </>
+    </Container>
   );
 };
 

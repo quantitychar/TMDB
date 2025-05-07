@@ -4,7 +4,7 @@ import { IMG_URL } from "./../../configs/api";
 import Button from "../Button/Button";
 import "./PosterCard.scss";
 
-const PosterCard = ({ poster }) => {
+const PosterCard = ({ poster, onClick }) => {
   return (
     <div className="card-poster">
       <img
@@ -24,7 +24,9 @@ const PosterCard = ({ poster }) => {
           <Button to={poster.name ? `/tv/${poster.id}` : `/movie/${poster.id}`}>
             Детальніше
           </Button>
-          <Button isOutline>Favorite</Button>
+          <Button isOutline onClick={onClick}>
+            Favorite
+          </Button>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { IMG_URL } from "../../../../configs/api";
+import Button from "../../../../components/Button/Button";
 
 import "./MovieItem.scss";
 
@@ -22,16 +23,12 @@ const MovieItem = ({ item, onClick }) => {
         </p>
         <p className="film-poster__desc">{item.overview}</p>
         <div className="button__wrapper">
-          <a className="button" href="linkPath">
-            Show more
-          </a>
-          <button
-            className="button"
-            onClick={() => onClick(item)}
-            type="button"
+          <Button
+            to={item.original_title ? `/movie/${item.id}` : `/tv/${item.id}`}
           >
-            Favorite
-          </button>
+            Show more
+          </Button>
+          <Button onClick={() => onClick(item)}>Favorite</Button>
         </div>
       </div>
     </div>

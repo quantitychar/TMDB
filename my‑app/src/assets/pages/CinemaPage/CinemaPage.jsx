@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import Container from "../../layout/Container/Container";
-// import { ArrowIcon } from "./icons/left-arrow.svg";
+import ArrowIcon from "./icons/left-arrow.svg";
 import { API_URL, IMG_URL, API_KEY_3 } from "./../../configs/api";
 import { sendRequestAxios } from "../../helpers/sendRequestAxios";
 import "./CinemaPage.scss";
@@ -10,7 +10,7 @@ const CinemaPage = () => {
   const [data, setData] = useState({});
   const navigate = useNavigate();
   const { id } = useParams();
-
+  console.log("id", id);
   useEffect(() => {
     sendRequestAxios(
       `${API_URL}/movie/${id}?api_key=${API_KEY_3}&language=uk-UA`
@@ -18,7 +18,7 @@ const CinemaPage = () => {
       setData(data);
     });
   }, []);
-
+  console.log(ArrowIcon);
   const {
     backdrop_path,
     poster_path,
@@ -44,7 +44,7 @@ const CinemaPage = () => {
       <Container>
         <div className="header-wrapper">
           <span className="btn-back" onClick={handleGoBack}>
-            <ArrowIcon />
+            <img src={ArrowIcon} />
           </span>
           <div className="header-poster">
             <img

@@ -1,0 +1,10 @@
+.user-info {
+  .info-item {
+    font-size: 16px;
+    padding: 16px 8px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}

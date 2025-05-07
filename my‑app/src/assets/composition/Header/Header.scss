@@ -8,9 +8,33 @@
   transition: top 0.2s linear;
 
   .header__logo {
+    position: relative;
     .logo {
       display: block;
       width: 154px;
+    }
+
+    .btn-back {
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      display: block;
+      width: 36px;
+      transform: translateY(-50%) rotate(180deg);
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        svg {
+          transform: translateX(10px);
+        }
+      }
+
+      svg {
+        transform: translateX(0);
+        fill: #fff;
+        transition: transform 0.8s;
+      }
     }
   }
 
