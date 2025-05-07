@@ -20,18 +20,25 @@ const AllCinemaPage = () => {
 
   useEffect(() => {
     sendRequestAxios(
-      `${API_URL}/discover/movie?api_key=${API_KEY_3}&language=uk-UA&page=${page}`
+      `${API_URL}/discover/movie?api_key=${API_KEY_3}&language=uk-UA&page=1`
     ).then((data) => {
-      setData(data);
+      setData(data); // метадані
       setResults(data.results);
     });
   }, []);
 
   useEffect(() => {
+    if (page === 1) return;
+
     sendRequestAxios(
       `${API_URL}/discover/movie?api_key=${API_KEY_3}&language=uk-UA&page=${page}`
     ).then((data) => {
-      setResults((prev) => [...prev, ...data.results]);
+      setResults((prev) => {
+        const prevIds = new Set(prev.map((m) => m.id));
+        const uniques = data.results.filter((m) => !prevIds.has(m.id));
+        return [...prev, ...uniques];
+      });
+      setData(data);
     });
   }, [page]);
 
